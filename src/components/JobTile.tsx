@@ -23,8 +23,8 @@ const JobTile = ({ jobtileProp, onClickButton }: { jobtileProp: jobtile, onClick
             <div className="flex gap-2 flex-wrap min-[600px]:flex-nowrap min-[600px]:items-center">
                 <LanguagesButton prop={jobtileProp.role} onClickFilterButton={onClickButton} />
                 <LanguagesButton prop={jobtileProp.level} onClickFilterButton={onClickButton} />
-                {jobtileProp.languages.map(i => <LanguagesButton prop={i} onClickFilterButton={onClickButton} />)}
-                {jobtileProp.tools.map(i => <LanguagesButton prop={i} onClickFilterButton={onClickButton} />)}
+                {jobtileProp.languages.map(i => <LanguagesButton key={jobtileProp.id + i} prop={i} onClickFilterButton={onClickButton} />)}
+                {jobtileProp.tools.map(i => <LanguagesButton key={jobtileProp.id + i} prop={i} onClickFilterButton={onClickButton} />)}
             </div>
         </div>
     )
