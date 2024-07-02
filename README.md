@@ -15,4 +15,4 @@ PS: this is not a real job searching website
 ## Deployments
 
 1. Github repo: [click here](https://github.com/swagthehooman/static_job_listing_FEM)
-2. Live website: [click here]()
+2. Live website: [click here](https://main--poetic-axolotl-777546.netlify.app/)
