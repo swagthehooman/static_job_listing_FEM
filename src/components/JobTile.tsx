@@ -1,6 +1,6 @@
 import LanguagesButton from "./LanguagesButton"
 
-const JobTile = ({ jobtileProp }: { jobtileProp: jobtile }) => {
+const JobTile = ({ jobtileProp, onClickButton }: { jobtileProp: jobtile, onClickButton: (value: string) => void }) => {
     return (
         <div className="w-[90%] ml-4 relative mt-16 border-l-darkCyan border-l-8 p-4 pt-8 rounded-md shadow-md bg-white min-[600px]:flex min-[600px]:w-auto min-[600px]:item-center min-[600px]:pt-4 min-[600px]:justify-between" key={jobtileProp.id}>
             <img src={jobtileProp.logo} alt="companyLogo" className="w-12 h-12 absolute -top-[10%] min-[600px]:top-1/2 min-[600px]:-translate-y-1/2 min-[600px]:w-20 min-[600px]:h-20" />
@@ -21,10 +21,10 @@ const JobTile = ({ jobtileProp }: { jobtileProp: jobtile }) => {
                 <hr className="hidden h-2 max-[600px]:block"></hr>
             </div>
             <div className="flex gap-2 flex-wrap min-[600px]:flex-nowrap min-[600px]:items-center">
-                <LanguagesButton prop={jobtileProp.role} />
-                <LanguagesButton prop={jobtileProp.level} />
-                {jobtileProp.languages.map(i => <LanguagesButton prop={i} />)}
-                {jobtileProp.tools.map(i => <LanguagesButton prop={i} />)}
+                <LanguagesButton prop={jobtileProp.role} onClickFilterButton={onClickButton} />
+                <LanguagesButton prop={jobtileProp.level} onClickFilterButton={onClickButton} />
+                {jobtileProp.languages.map(i => <LanguagesButton prop={i} onClickFilterButton={onClickButton} />)}
+                {jobtileProp.tools.map(i => <LanguagesButton prop={i} onClickFilterButton={onClickButton} />)}
             </div>
         </div>
     )
