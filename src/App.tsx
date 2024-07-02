@@ -1,7 +1,7 @@
 import JobTile from "./components/JobTile"
 import FilterBox from "./components/FilterBox"
 import jobs from "../public/data.json"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function App() {
 
